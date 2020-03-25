@@ -1,0 +1,74 @@
+/* ==========================================================================
+   #RESET
+   ========================================================================== */
+
+/**
+ * A very simple reset that sits on top of Normalize.css.
+ */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure,
+table,
+address,
+fieldset,
+legend {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Remove default table spacing.
+ */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/**
+ * 1. Reset Chrome and Firefox behaviour which sets a `min-width: min-content;`
+ *    on fieldsets.
+ */
+
+fieldset {
+  min-width: 0; /* [1] */
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Remove all animations and transitions for people that prefer not to see them.
+ * VIA (https://github.com/hankchizljaw/modern-css-reset/blob/master/src/reset.css)
+ */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============== */
+
+// Dropdown icon fix for IE
+select::-ms-expand {
+  display: none;
+}
+

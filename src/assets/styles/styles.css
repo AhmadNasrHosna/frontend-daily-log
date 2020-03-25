@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+/* ============================================================================
+  MAIN STYLES
+  ========================================================================= */
+
+/**
+ * Main styles.
+ *
+ * The structure is based on ITCSS and modified:
+ * https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture
+ * https://css-tricks.com/combining-the-powers-of-sem-and-bio-for-improving-css
+ * https://gist.github.com/iamryanyu/3bf1a3c4d23cbe4e407c1dd95358d9b6
+ * https://zellwk.com/blog/css-architecture-2/
+ * This helps the CSS specificity:
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
+ *
+ *
+ */
+
+/**
+ * Settings.
+ *
+ * Design tokens for UI.
+ * Used with preprocessors and contain global variables for fonts, colors definitions, etc.
+ * In this layer is common define the variables that can customize the template.
+ */
+
+@import 'settings/_global';
+
+/**
+ * Tools.
+ *
+ * Globally used functions, placeholders and mixins e.g. mq mixins, font-face mixins
+ * NOTE: it is important not to output any CSS in the first 2 layers.
+ */
+
+@import "tools/mixins/_breakpoints";
+@import "tools/mixins/_clearfix";
+@import "tools/mixins/_effects";
+@import "tools/mixins/_sr-only";
+@import "tools/mixins/_centering";
+@import "tools/mixins/_pseudo-starter";
+@import 'tools/mixins/_reset';
+
+/**
+ * Generic. or (Vendors things)
+ *
+ * Third-party CSS vendors including reset and/or normalize styles, box-sizing definition, custom fonts stylesheets (font-face at-rule definitions), or even Foundation and Bootstrap.
+ * This is the first layer which generates actual CSS.
+ * Note: The reason these styles are higher up in the structure is so we can override them if needed.
+ */
+
+@import "normalize.css";
+@import "generic/_reset";
+@import "generic/_shared";
+@import "generic/_box-sizing";
+@import "generic/_font-face";
+
+/**
+ * Elements. (namespace: e-)
+ *
+ * Styling for bare HTML elements (unclassed html elements)
+ * e.g. headings, lists, tables, images, links, buttons
+ * These come with default styling from the browser so we can redefine them here.
+ * NOTE: this is the last layer that styles tag selectors.
+ */
+
+@import "elements/_page";
+@import "elements/_links";
+@import "elements/_forms";
+@import "elements/_headings";
+@import "elements/_paragraphs";
+
+/**
+ * Objects. (namespace: o-)
+ *
+ * Class-based selectors which define undecorated design patterns,
+ * for example, for example media object known from OOCSS such as list, radio-button. The Daniel Fornell’s codepen https://codepen.io/collection/DmzVOM/ shows you a list of objects designed using this architecture.
+ * Classes here are loosely named, and typically following the OOCSS methodology. `No cosmetics. Agnostically named (e.g. .ui-list).` - ITCSS author
+ *
+ */
+
+@import "objects/_container";
+@import "objects/_lists";
+@import "objects/_section";
+@import "objects/_media";
+@import "objects/_animations";
+
+/**
+ * Layouts. (namespace: l-)
+ *
+ */
+
+ @import "layouts/_flow";
+ @import "layouts/_testimonials";
+ @import "layouts/_header";
+ @import "layouts/_section";
+
+/**
+ * Components. (namespace: c-)
+ *
+ * specific UI components.
+ * This is where majority of our work takes place and our UI components are often composed of Objects and Components
+ * for example button, card, concrete-list, etc..
+ * Class names here are more specific (must be named explicitly).
+ */
+
+@import "components/_buttons";
+@import "components/_react-component-style";
+
+/**
+ * Patterns. (namespace: p-)
+ *
+ * Patterns as a combination of components but in a way that is not scalable.
+ * for example, The header would be a pattern because it is not scalable (the header cannot be used in the content or sidebar area) and also contains other components such as buttons, accordions, menus, logos, search form etc
+ */
+
+
+/**
+ * Scopes. (namespace: s-)
+ *
+ * Scoping in the page level (classes set in the BODY tag) but only used when it's absolutely necessary.
+ * https://css-tricks.com/combining-the-powers-of-sem-and-bio-for-improving-css/
+ * https://gist.github.com/jareware/4738651#1-prefixing-parent-selector-references
+ */
+
+/**
+ * Utilities. (namespace: u-)
+ * Utilities and helper classes with ability to override anything else in the triangle.
+ * It will most likely come with !important as we are sure to use them.
+ * In other words: Each utility class has an !important suffix to max out its specificity. Utility classes are for final adjustments, and should not be overridden by anything that comes before them.
+ */
+
+// @import 'utilities/_background';
+@import 'utilities/_centering';
+// @import 'utilities/_display';
+// @import 'utilities/_floats';
+@import 'utilities/_headings';
+// @import 'utilities/_relative-height';
+@import 'utilities/_spacings';
+@import 'utilities/_typography';
+@import 'utilities/_colors';
+@import 'utilities/_clearfix';
+@import 'utilities/_effects';
+@import 'utilities/_show-hide';
+@import 'utilities/_print';

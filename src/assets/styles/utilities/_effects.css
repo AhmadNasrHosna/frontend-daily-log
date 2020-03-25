@@ -1,0 +1,3 @@
+.u-box-shadow-radius {
+  @mixin box-shadow-radius;
+}

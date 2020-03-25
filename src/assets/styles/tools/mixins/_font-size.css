@@ -1,0 +1,15 @@
+///* ========================================================================
+//   #FONT-SIZE
+//   ======================================================================== */
+
+// Generates a rem font-size (with pixel fallback) and a baseline-compatible
+// unitless line-height from a pixel font-size value. Basic usage is simply:
+//
+//   @include inuit-font-size(18px);
+//
+
+
+@define-mixin rem $prop, $value: 1.6 {
+  $prop: calc($value * 10px);
+  font-size: $(value)rem;
+}

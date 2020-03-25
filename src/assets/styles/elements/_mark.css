@@ -1,0 +1,5 @@
+mark {
+  background: var(--color-highlight);
+  padding: .1em .4em;
+  border-radius: 3px;
+}

@@ -1,0 +1,57 @@
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+*/
+
+.u-sr-only {
+  @mixin sr-only;
+}
+
+
+/*
+
+When an element has a hidden attribute, they should be hidden
+from view. Normalize.css does this for us already.
+
+The problem with this style is its low specificity.
+
+I often add hidden to other elements I style with a
+class. A class�s specificity is high than an attribute
+, and the display: none property doesn�t work.
+
+This is why I opt to bump up [hidden]'s
+specificity with !important.
+
+*/
+
+[hidden] {
+	display: none !important;
+}
+
+
+/**
+ * Hide visually and from screen readers.
+ */
+
+ .u-hidden {
+
+  // Hide only in all small devices
+  &--as {
+    @mixin bp as { display: none; }
+  }
+
+  // Hide only in all big devices, start from medium breakpoint
+  &--md {
+    @mixin bp md { display: none; }
+  }
+}
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+
+.u-invisible {
+  visibility: hidden;
+}
+

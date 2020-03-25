@@ -1,0 +1,68 @@
+{
+  "extends": "stylelint-config-recommended",
+
+  "rules": {
+
+    "function-calc-no-invalid": true,
+    "property-no-unknown": [
+      true,
+      {
+        "ignoreProperties": ["font-named-instance"],
+        "ignoreSelectors": []
+      }
+    ],
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "extends",
+          "at-root",
+          "define-mixin",
+          "define-placeholder",
+          "/^my-/i",
+          "content",
+          "debug",
+          "each",
+          "else",
+          "else if",
+          "error",
+          "extend",
+          "for",
+          "function",
+          "if",
+          "import",
+          "include",
+          "media",
+          "mixin",
+          "return",
+          "warn",
+          "while"
+        ]
+      }
+    ],
+    "color-no-invalid-hex": true,
+    "max-empty-lines": 2,
+    "rule-empty-line-before": [
+      "always",
+      {
+        "except": ["first-nested"],
+        "ignore": ["after-comment"]
+      }
+    ],
+    "block-no-empty": null,
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": [
+          "export",
+          "import",
+          "global",
+          "local",
+          "external"
+        ]
+      }
+    ],
+    "unit-whitelist": ["em", "rem", "s", "%", "px", "vh", "vw", "ms", "deg", "fr", "ch"]
+  },
+  "ignoreFiles": ["app/bootstrap/**/*.css"]
+}

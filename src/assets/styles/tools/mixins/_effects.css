@@ -1,0 +1,5 @@
+@define-mixin box-shadow-radius $radius: 4px {
+  border-radius: $radius;
+  box-shadow: var(--box-shadow-global);
+  overflow: hidden;
+}

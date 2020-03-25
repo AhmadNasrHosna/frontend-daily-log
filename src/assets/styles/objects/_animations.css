@@ -1,0 +1,42 @@
+/* ==========================================================================
+   #ANIMATIONS (GLOBAL)
+   ========================================================================== */
+
+/**
+ * NOTE[1]: Generic, global animations as objects, eg. @keyframes o-fade-in or JS classes .o-fade-in, inside _objects/animations.css file.
+ * NOTE[2]: Component specific animations should be defined in respective components files, eg. @keyframes c-hero-scale in components/_hero.css.
+ */
+
+/* Reveal Items */
+
+.o-reveal {
+  transition: all .5s ease-out;
+
+  @mixin bp lg {
+    &:nth-of-type(2) {
+      transition-delay: 0.2s;
+    }
+
+    &:nth-of-type(3) {
+      transition-delay: 0.4s;
+    }
+
+    &:nth-of-type(4) {
+      transition-delay: 0.6s;
+    }
+  }
+
+  &--is-hidden {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  &--is-visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* ---------------- */
+

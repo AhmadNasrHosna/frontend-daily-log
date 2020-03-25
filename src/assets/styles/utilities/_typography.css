@@ -1,0 +1,153 @@
+/*------------------------------------*\
+    #TYPOGRAPHY
+\*------------------------------------*/
+
+/**
+ * Headings.
+ *
+ * Redefine our heading styles against utility classes. This gives us a double
+ * stranded heading hierarchy whereby we can style one heading as another, e.g.:
+ *
+    <h4 class="u-h1">I am an H4 that is the same size as an H1</h4>
+ *
+ */
+
+.u-s1 { font-size: var(--s1); }
+
+.u-s2 { font-size: var(--s2); }
+
+.u-s3 { font-size: var(--s3); }
+
+.u-s4 { font-size: var(--s4); }
+
+.u-s5 { font-size: var(--s5); }
+
+.u-s6 { font-size: var(--s6); }
+
+
+/**
+ * Font Family.
+ */
+
+.u-ff-sans-serif { font-family: var(--ff-sans-serif) } // sans-serif
+
+.u-ff-serif      { font-family: var(--ff-serif)      } // serif
+
+.u-ff-monospace  { font-family: var(--ff-monospace)  } // monospace
+
+
+/**
+ * Weights.
+ */
+
+.u-fw-100 { font-weight: 100 }
+
+.u-fw-200 { font-weight: 200 }
+
+.u-fw-300 { font-weight: 300 }
+
+.u-fw-400 { font-weight: 400 }
+
+.u-fw-500 { font-weight: 500 }
+
+.u-fw-600 { font-weight: 600 }
+
+.u-fw-700 { font-weight: 700 }
+
+.u-fw-800 { font-weight: 800 }
+
+.u-fw-900 { font-weight: 900 }
+
+
+/**
+ * Font Styles.
+ */
+
+.u-fs-normal { font-style: normal  }
+
+.u-fs-italic { font-style:  italic }
+
+
+/**
+ * Transforms.
+ */
+
+.u-tt-uppercase { text-transform: uppercase }
+
+.u-tt-lowercase { text-transform: lowercase }
+
+.u-tt-none      { text-transform:      none }
+
+
+/**
+ * Decorations.
+ */
+
+.u-td-none      { text-decoration:      none }
+
+.u-td-underline { text-decoration: underline }
+
+.u-td-wavy      { text-decoration:      wavy }
+
+
+/**
+ * Alignments.
+ */
+
+.u-align-end     { text-align:      end }
+
+.u-align-start   { text-align: start    }
+
+.u-align-center  { text-align:  center  }
+
+.u-align-justify { text-align: justify  }
+
+/**
+ * Letter Spacing
+ */
+.u-ls-015   { letter-spacing: var(--letter-spacing-015)   }
+
+.u-ls-025   { letter-spacing: var(--letter-spacing-025)   }
+
+.u-ls-04    { letter-spacing: var(--letter-spacing-04)    }
+
+.u-ls-n-015 { letter-spacing: var(--letter-spacing-n-015) }
+
+.u-ls-n-025 { letter-spacing: var(--letter-spacing-n-025) }
+
+.u-ls-n-04  { letter-spacing: var(--letter-spacing-n-04)  }
+
+/**
+ * Line-height
+ */
+
+ .u-lh-xs { line-height: var(--line-height-xs) }
+
+ .u-lh-sm { line-height: var(--line-height-sm) }
+
+ .u-lh-md { line-height: var(--line-height-md) }
+
+ .u-lh-lg { line-height: var(--line-height-lg) }
+
+ .u-lh-xl { line-height: var(--line-height-xl) }
+
+
+/**
+* Truncation.
+*
+* Cause long spans of text to truncate after running out of horizontal space.
+*/
+
+// .u-text-truncate { @mixin truncate 100%; }
+
+/**
+ * Word-Wrap:
+ *
+ * Force Text to Wrap
+ */
+
+.u-word-wrap {
+	overflow-wrap: break-word;
+	word-break: break-all;
+	word-wrap: break-word;
+}

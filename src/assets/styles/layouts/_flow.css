@@ -1,0 +1,105 @@
+/* ===================================================
+   #FLOW
+   =================================================== */
+
+/**
+ * A tiny utility
+ * works with elements in layouts archticture layer, to overide elements later if we have to.
+ * helps with rhythm by adding margin to siblings
+ * (namespace: l-)
+ *
+ * --flow-space: The amount of space between siblings with fallback;
+ */
+
+
+.l-flow {
+  // Default
+  --flow-space-all   : var(--s4);
+  --flow-space-p     : calc(var(--s2) - var(--s-4));
+  --flow-space-p-to-h: var(--s2);
+
+  // Any element after any direct child element will have:
+  > * + * {
+    margin-top: rem(36px); // fallback
+    margin-top: var(--flow-space-all);
+  }
+
+  // Any paragraph after any paragraph will have:
+  p + p {
+    margin-top: rem(20px); // fallback
+    margin-top: var(--flow-space-p);
+  }
+
+  // Any paragraph after any heading level will have:
+  h1 + p,
+  h2 + p,
+  h3 + p,
+  h4 + p,
+  h5 + p,
+  h6 + p  {
+    margin-top: rem(32px); // fallback
+    margin-top: var(--flow-space-p-to-h);
+  }
+}
+
+.l-flow--sm {
+  // Default
+  --flow-space-all   : var(--s2);
+  --flow-space-p     : calc(var(--s1) - var(--s-3));
+  --flow-space-p-to-h: var(--s1);
+}
+
+.l-flow--md {
+  --flow-space-all   : var(--s3);
+  --flow-space-p     : calc(var(--s1) - var(--s-4));
+  --flow-space-p-to-h: var(--s1);
+}
+
+
+.l-flow__all-s1  { --flow-space-all    : var(--s1); }
+
+.l-flow__all-s2  { --flow-space-all    : var(--s2); }
+
+.l-flow__all-s3  { --flow-space-all    : var(--s3); }
+
+.l-flow__all-s4  { --flow-space-all    : var(--s4); }
+
+.l-flow__all-s5  { --flow-space-all    : var(--s5); }
+
+.l-flow__all-s6  { --flow-space-all    : var(--s6); }
+
+// ===
+
+.l-flow__p-s1    { --flow-space-p      : var(--s1); }
+
+.l-flow__p-s2    { --flow-space-p      : var(--s2); }
+
+.l-flow__p-s3    { --flow-space-p      : var(--s3); }
+
+.l-flow__p-s4    { --flow-space-p      : var(--s4); }
+
+.l-flow__p-s5    { --flow-space-p      : var(--s5); }
+
+.l-flow__p-s6    { --flow-space-p      : var(--s6); }
+
+// ===
+
+.l-flow__ptoh-s1 { --flow-space-p-to-h : var(--s1); }
+
+.l-flow__ptoh-s2 { --flow-space-p-to-h : var(--s2); }
+
+.l-flow__ptoh-s3 { --flow-space-p-to-h : var(--s3); }
+
+.l-flow__ptoh-s4 { --flow-space-p-to-h : var(--s4); }
+
+.l-flow__ptoh-s5 { --flow-space-p-to-h : var(--s5); }
+
+.l-flow__ptoh-s6 { --flow-space-p-to-h : var(--s6); }
+
+// ===
+
+.l-flow__all-reset   { --flow-space-all   : 0;}
+
+.l-flow__p-reset     { --flow-space-p     : 0;}
+
+.l-flow__ptoh-reset  { --flow-space-p-to-h: 0;}

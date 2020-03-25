@@ -1,0 +1,59 @@
+/* ==========================================================================
+   #PAGE
+   ========================================================================== */
+
+/**
+ * Page-level styling (e.g. HTML and BODY elements).
+ *
+ * 1. Set the base `font-size` and default `line-height` for the entire project,
+ *    sourced from our default variables ('setting/_global'). The `font-size` is calculated to exist
+ *    in rems, the `line-height` is calculated to exist unitlessly.
+ *
+ * 2. Ensure the page always fills at least the entire height of the viewport.
+ *
+ * 3. The scrolling box scrolls in a smooth fashion.
+ *    https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior
+ */
+
+html {
+  font-size  : var(--font-size-base);  /* [1] : 10px */
+  scroll-behavior: smooth; /* [3] */
+}
+
+body {
+  background : var(--color-bg-primary);
+  color      : var(--color-text-global);
+  line-height: var(--line-height-md);  /* [1] */
+  font-size  : $font-size-global; @supports (--css: varibales) {
+  font-size  : var(--font-size-global); } /* [1] */
+  font-family: var(--font-family-plain);
+  -webkit-font-smoothing : antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeSpeed;
+  min-height: 100vh;  /* [2] */
+}
+
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+@define-mixin page-selection-styles {
+  background : var(--color-brand-accent);
+  color      : #ffffff;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  @mixin page-selection-styles;
+}
+
+::selection {
+  @mixin page-selection-styles;
+}

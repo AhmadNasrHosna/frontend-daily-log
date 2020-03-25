@@ -1,0 +1,39 @@
+/* ==========================================================================
+   #IMAGES
+   ========================================================================== */
+
+/**
+ * 1. Fluid images for responsive purposes.
+ * 2. Offset `alt` text from surrounding copy.
+ * 3. Setting `vertical-align` removes the whitespace that appears under `img`
+ *    elements when they are dropped into a page as-is. Safer alternative to
+ *    using `display: block;`.
+ */
+
+img {
+	/**
+   * [1] max-width: 100%;
+   * [2] font-style: italic;
+   * [3] vertical-align: middle;
+   *
+   * Declared before in 'generic/_shared.css'
+   */
+
+	transition: 0.3s ease-out;
+
+	@media (prefers-color-scheme: dark) {
+		opacity: 0.65;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+// In case you don't have control over generated `width` and `height` attributes
+// on `<img>` elements in your markup, but still want the images to be fluidز
+
+img[width],
+img[height] {
+	max-width: none;
+}

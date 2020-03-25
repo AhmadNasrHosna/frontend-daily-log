@@ -1,0 +1,4 @@
+@define-mixin pseudo-starter {
+  content: '';
+  display: block;
+}

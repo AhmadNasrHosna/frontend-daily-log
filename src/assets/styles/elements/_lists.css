@@ -1,0 +1,18 @@
+/**
+ * Remove trailing margins from nested lists.
+ */
+
+li > {
+  ol,
+  ul {
+    margin-bottom: 0;
+  }
+}
+
+/**
+ * Visually offset definition titles from their definitions.
+ */
+
+dt {
+  font-weight: 700; 
+}

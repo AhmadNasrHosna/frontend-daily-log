@@ -1,0 +1,12 @@
+// https://hankchizljaw.com/wrote/introducing-the-button-element/
+
+@define-mixin button-reset {
+  display: inline-block;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; /* Use whatever font-family you want */
+  line-height: 1;
+  background: transparent;
+  -webkit-appearance: none;
+}

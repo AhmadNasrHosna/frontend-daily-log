@@ -1,0 +1,9 @@
+// React root element:
+#root {
+  background-color: hsl(42, 75%, 96%);
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+// React component style:

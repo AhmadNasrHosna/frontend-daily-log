@@ -1,0 +1,67 @@
+/* ==========================================================================
+   #HEADINGS
+   ========================================================================== */
+
+/**
+ * Simple default styles for headings 1 through 6. Anything more opinionated
+ * than simple font-size changes should likely be applied via classes (see:
+ * http://csswizardry.com/2016/02/managing-typography-on-large-apps/).
+ */
+
+// We have all of our heading font sizes defined here. Passing these pixel
+// values into our `inuit-font-size()` mixin will generate a rem-based
+// `font-size` with a pixel fallback, as well as generating a `line-height` that
+// will sit on our baseline grid.
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: var(--line-height-sm);
+}
+
+// Heading mobile individual styles
+
+/* h1 {
+  font-size: var(--s6);
+}
+
+h2 {
+  font-size: var(--s5);
+}
+
+h3 {
+  font-size: var(--s4);
+}
+
+h4 {
+  font-size: var(--s3);
+}
+
+h5 {
+  font-size: var(--s2);
+}
+
+h6 {
+  font-size: var(--s1);
+} */
+
+/* @mixin bp md {
+  // Heading desktop individual styles
+  h1 {
+    font-size: $h1;
+  }
+
+  h2 {
+    font-size: $h2;
+  }
+
+  h3 {
+    font-size: $h3;
+  }
+
+  h4 {
+    font-size: $h4;
+  }
+
+  h5 {
+    font-size: $h5;
+  }
+} */

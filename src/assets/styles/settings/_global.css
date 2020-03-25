@@ -1,0 +1,206 @@
+///* ========================================================================
+//   #GLOBAL
+//   ======================================================================== */
+
+// The global settings file contains any project-wide variables; things that
+// need to be made available to the entire codebase.
+
+/**
+ * Variables
+ *
+ * The majority of the configuration for the toolkit.
+ */
+
+:root {
+
+  //==============================================================================
+  // BREAKPOINTS Mixins
+  //==============================================================================
+
+  $bp-xs: 35.99875em; //~ 575.98px      1em == 16px
+  $bp-sm: 36em;       //~ 576px
+  $bp-as: 47.99875em; //~ 767.98px
+  $bp-md: 48em;       //~ 768px
+  $bp-lg: 62em;       //~ 992px
+  $bp-xl: 75em;       //~ 1200px
+
+  //==============================================================================
+  // Global Colors
+  //==============================================================================
+
+  // Brand colors
+  --color-brand-primary: hsl(42 , 82%, 57%);
+
+  // Accent colors: Accent colors is also known as Secondary colors. Used for used for: Buttons, Selection controls, like sliders and switches Highlighting, selected text, Links and headlines, etc...
+  --color-brand-accent : hsl(222, 82%, 57%);
+
+  // Text colors
+  --color-text-global  : #343434;
+
+  // Backgrounds colors
+  --color-background-light: #fff;
+  --color-background-dark : var(--color-brand-primary);
+
+  // Anchors colors
+  --color-link         : var(--color-brand-accent);
+  --color-link-hover   : color-mod(var(--color-link) whiteness(50%));
+
+  // Forms colors
+  --color-form-legend            : #fff;
+  --color-form-legend-bg         : #005639;
+  --color-form-label             : #002317;
+  --color-form-fieldset-border   : #005639;
+  --color-form-border-color      : var(--color-border-global);
+  --color-form-border-hover-color: color-mod(var(--color-border-global) blackness(20%));
+  --color-form-border-focus      : var(--color-brand-accent);
+  --color-form-focus-shaddow     : color-mod(var(--color-brand-accent) whiteness(50%));
+  --color-form-placeholder-color : color-mod(var(--color-brand-accent) blackness(40%));
+
+  // Borders Colors
+  --color-border-global: #dedede;
+
+  // Tables colors
+  --color-table-stripes: #f8f8f8;
+  --color-table-caption: #ababab;
+
+  // Other
+  --color-highlight: #ffeea8;
+  --color-error    : #d33c40;
+  --color-success  : #29de7d;
+
+  //==============================================================================
+  // Typography
+  //==============================================================================
+
+  // Modular Scale
+   $base-scale-size-xs: rem(10.5px);
+   $base-scale-size-sm: rem(12.5px);
+   $base-scale-size-md: rem(14px);
+   $base-scale-size-lg: rem(16px);
+
+  --base-scale-size-xs: $base-scale-size-xs;
+  --base-scale-size-sm: $base-scale-size-sm;
+  --base-scale-size-md: $base-scale-size-md;
+  --base-scale-size-lg: $base-scale-size-lg;
+
+  --ratio: 1.4; // The ratio number
+
+    --s-6: calc(var(--s-5) / var(--ratio));
+    --s-5: calc(var(--s-4) / var(--ratio));
+    --s-4: calc(var(--s-3) / var(--ratio));
+    --s-3: calc(var(--s-2) / var(--ratio));
+    --s-2: calc(var(--s-1) / var(--ratio));
+    --s-1: calc(var(--s0) / var(--ratio));
+
+    // --s0 is the base scale size (mobile-first)
+    --s0: var(--base-scale-size-xs); @media (min-width: $bp-sm) {
+    --s0: var(--base-scale-size-sm) } @media (min-width: $bp-md) {
+    --s0: var(--base-scale-size-md) } @media (min-width: $bp-lg) {
+    --s0: var(--base-scale-size-lg) }
+
+    --s1: calc(var(--s0) * var(--ratio));
+    --s2: calc(var(--s1) * var(--ratio));
+    --s3: calc(var(--s2) * var(--ratio));
+    --s4: calc(var(--s3) * var(--ratio));
+    --s5: calc(var(--s4) * var(--ratio));
+    --s6: calc(var(--s5) * var(--ratio));
+
+
+  // Font-size
+  --font-size-base     : 62.5%; // 10px .. relative to <html> element
+
+   $font-size-global: rem(15px);   @media (min-width: $bp-sm) {
+   $font-size-global: rem(16px); } @media (min-width: $bp-md) {
+   $font-size-global: rem(17px); } @supports (--css: varibales) {
+  --font-size-global: rem(15px);   @media (min-width: $bp-sm) {
+  --font-size-global: rem(16px); } @media (min-width: $bp-md) {
+  --font-size-global: rem(17px); } } /* why this pattern?
+                                      * To make PostCSS stop providing fallback to custom properties. It provide the compiled code with fallback to the first custom property outside scope of the @media rule for all breakpoints!, and then we get the fixed values using $ SASS Variables as fallback for older browser. */
+
+    // Font-family
+  --font-family-plain  : "Inter", system-ui;
+  --font-family-special: "bluu_nextbold_italic", serif;
+  --font-family-mono   : "Consolas", "Lucida Console", Menlo, Monaco, monospace;
+
+  // Line-height
+  --line-height: 1.4;
+  --line-height-xs: calc(0.7 * var(--line-height));  // 1.12
+  --line-height-sm: calc(0.85715 * var(--line-height));  // 1.2
+  --line-height-md:             var(--line-height);  // 1.4 (based on ratio number)
+  --line-height-lg: calc(1.2 * var(--line-height));  // 1.68
+  --line-height-xl: calc(1.25 * var(--line-height)); // 1.75
+
+  // Letter-spacing
+  --letter-spacing-015  :  .015em;
+  --letter-spacing-025  :  .025em;
+  --letter-spacing-04   :   .04em;
+  --letter-spacing-n-015: -.015em;
+  --letter-spacing-n-025: -.025em;
+  --letter-spacing-n-04 :  -.04em;
+
+  //==============================================================================
+  // Borders
+  //==============================================================================
+
+  --border-width-thin   : var(--s-1);
+  --border-width-thick  : var(--s-2);
+  --border-style        : solid;
+  --border-radius-global: 3px;
+  --border-global       : var(--border-width-thin) var(--border-style) var(--color-border-global);
+
+  //==============================================================================
+  // Transitions
+  //==============================================================================
+
+  --transition-duration-global   : 300ms;
+  --transition-timing-func-global: ease-out;
+  --transition-global            : all var(--transition-duration-global) var(--transition-timing-func-global);
+
+  //==============================================================================
+  // Shadows
+  //==============================================================================
+
+  --box-shadow-global: 0 3px 7px rgba(0, 0, 0, .2);
+
+  //==============================================================================
+  // Z-index
+  //==============================================================================
+
+  --zi-header: 2;
+  --zi-popover: 4;
+  --zi-fixed-element: 5;
+  --zi-overlay: 10; // modals and dialogs
+
+  //==============================================================================
+  // Spacings
+  //==============================================================================
+
+  --layout-gap: var(--s3);
+}
+
+
+/* // Modular Scale
+$base-scale-size-xs: rem(10.5px);
+$base-scale-size-sm: rem(12.5px);
+$base-scale-size-md: rem(14px);
+$base-scale-size-lg: rem(16px);
+--ratio: 1.4; // The ratio number
+// $s0 is the base scale size (mobile-first)
+$s0: $base-scale-size-xs;  @media (min-width: $bp-sm) {
+$s0: $base-scale-size-sm } @media (min-width: $bp-md) {
+$s0: $base-scale-size-md } @media (min-width: $bp-lg) {
+$s0: $base-scale-size-lg }
+
+--s-6: calc($s0 / var(--ratio) / var(--ratio) / var(--ratio) / var(--ratio) / var(--ratio) / var(--ratio));
+--s-5: calc($s0 / var(--ratio) / var(--ratio) / var(--ratio) / var(--ratio) / var(--ratio));
+--s-4: calc($s0 / var(--ratio) / var(--ratio) / var(--ratio) / var(--ratio));
+--s-3: calc($s0 / var(--ratio) / var(--ratio) / var(--ratio));
+--s-2: calc($s0 / var(--ratio) / var(--ratio));
+--s-1: calc($s0 / var(--ratio));
+
+--s1: calc($s0 * var(--ratio));
+--s2: calc($s0 * var(--ratio) * var(--ratio));
+--s3: calc($s0 * var(--ratio) * var(--ratio) * var(--ratio));
+--s4: calc($s0 * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio));
+--s5: calc($s0 * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio));
+--s6: calc($s0 * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio)); */

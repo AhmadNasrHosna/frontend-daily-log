@@ -1,0 +1,16 @@
+///* ========================================================================
+//   #TRUNCATION
+//   ======================================================================== */
+
+/**
+ * Truncation.
+ *
+ * Cause long spans of text to truncate after running out of horizontal space.
+ */
+
+@define-mixin truncate $limit: 100%, $i {
+  max-width     :     $limit;
+  white-space   :     nowrap;
+  overflow      :     hidden;
+  text-overflow :   ellipsis;
+}
