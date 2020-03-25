@@ -27,7 +27,7 @@ class CounterParent extends React.Component {
 		};
 	}
 
-	// event handler
+	// event handler === //
 	increaseCounter(e) {
 		let currentCount = this.state.count;
 
