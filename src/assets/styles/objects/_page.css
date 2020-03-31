@@ -2,86 +2,18 @@
    PAGE (GLOBAL)
    ========================================================================= */
 
-
 /**
  * the first element after BODY.
  * the most outer container which usually contains max-width: 100vw and overflow: hidden.
  */
 
-
-/**
- * Variables
- */
-
-$main-margin-top: rem(56);
-$main-margin-bottom: rem(20);
-
-/**
- * Mixinx
- */
-
-@mixin home-main-height {
-  height: calc(100vh - #{$main-margin-top});
-  max-height: calc(100vh - #{$main-margin-top});
-}
-
-/**
- * Styles
- */
-
-body {
-  background-color: $unicorn-g-color-grey-900;
-
-  &.is-main-nav-active {
-    height: 100%;
-    overflow: hidden;
-  }
-}
-
 // Outer container including header
 .o-page {
-  min-height: 100vw;
-  overflow-x: hidden;
-}
+  min-height: 100vh;
 
-// Outer container excluding header
-.o-main {
-  margin-top: $main-margin-top;
-
-  &::before {
-    background-color: transparent;
-    content: '';
-    transition: background-color $transition;
+  @media (min-width: 36em) {
+    display: grid;
+    grid-template-rows: 5.95rem auto 2.5rem;
   }
-
-  .is-main-nav-active & {
-    //filter: blur(5px);
-    &::before {
-      background-color: hsla(0, 0%, 0%, 0.6);
-      content: '';
-      height: 100%;
-      left: 0;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 5;
-    }
-  }
-
-  .unicorn-container {
-    &:not([data-scope="home-page"]) {
-      margin-top: rem(100);
-    }
-  }
-
-  // body:not(.s-home) & {
-  //   @include mq($from: medium) {
-  //     margin-top: rem(120);
-  //   }
-  // }
-
-  // .s-page-home & {
-  //   @include home-main-height;
-  // }
 }
 

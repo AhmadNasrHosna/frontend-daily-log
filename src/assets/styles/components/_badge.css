@@ -1,0 +1,24 @@
+.c-badge {
+  color: #fff;
+  padding: 0 0.6em;
+  border-radius: 50px;
+  font-family: var(--font-family-mono);
+  font-size: 0.649rem;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+  user-select: none;
+  display: inline-block;
+
+  &--html {
+    background-color: hsl(14, 81%, 53%);
+  }
+
+  &--css {
+    background-color: hsl(204, 99%, 38%);
+  }
+
+  &--js {
+    background-color: hsl(52, 84%, 50%);
+    color: #333;
+  }
+}

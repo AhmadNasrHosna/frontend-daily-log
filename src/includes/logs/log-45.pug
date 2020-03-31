@@ -1,0 +1,15 @@
+extends ../components/_log
+
+block vars
+  - var day = '16';
+  - var month = 'Mar';
+  - var year = '2020';
+  - var index = '45';
+
+
+block content
+  :markdown-it(linkify langPrefix='highlight-')
+    Continued working on the [modal](https://github.com/ahmedhosna95/travel-site-workflow-updated/blob/master/src/assets/scripts/modules/modal.js) to make it interactive on JavaScript DOM *click* event. And I learned how to detect a key press with VanillaJs. Also, I got started on configuring Webpack for Production build.
+  img.gif-preview(src='assets/images/modal.gif', alt='Modal overlay')
+
+

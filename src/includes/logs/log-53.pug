@@ -1,0 +1,46 @@
+//-:markdown-it(linkify langPrefix='highlight-')
+extends ../components/_log
+
+block vars
+  - var day = '24';
+  - var month = 'Mar';
+  - var year = '2020';
+  - var index = '53';
+
+
+block content
+  p
+    | Read about how to access DOM elements in React using `refs` and `Portals`. I need to read about Portals again until I fully understand. Also, I read about handling events from React Documentation. I would like to quote some paragraphs from there:
+  blockquote
+    p
+      | You have to be careful about the meaning of this in JSX callbacks. In JavaScript, class methods are not bound by default. If you forget to bind this.handleClick and pass it to onClick, this will be undefined when the function is actually called.
+    p
+      | This is not React-specific behavior; it is a part of how functions work in JavaScript. Generally, if you refer to a method without () after it, such as onClick={this.handleClick}, you should bind that method.
+      :markdown-it(linkify langPrefix='highlight-')
+        Read more: [Handling Events](https://reactjs.org/docs/handling-events.html)
+    hr
+    p
+      | We sometimes use => to define "arrow functions". They're
+      | like regular functions, but shorter. For example, x => x *
+      | 2 is roughly equivalent to function(x) { return x * 2; }.
+      | Importantly, arrow functions don't have their own this
+      | value so they're handy when you want to preserve the this
+      | value from an outer method definition.
+      a(href='https://gist.github.com/gaearon/683e676101005de0add59e8bb345340c') *
+    hr
+    p
+      | The problem with this syntax is that a different callback
+      | is created each time the LoggingButton renders. In most
+      | cases, this is fine. However, if this callback is passed
+      | as a prop to lower components, those components might do
+      | an extra re-rendering. We generally recommend binding in
+      | the constructor or using the class fields syntax, to avoid
+      | this sort of performance problem.
+  h3 I read:
+  ul
+    li
+      a(href='https://www.kirupa.com/react/accessing_dom_elements.htm') Accessing DOM Elements in React
+    li
+      a(href='https://reactjs.org/docs/handling-events.html') Handling Events
+
+

@@ -2,7 +2,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #ccc;
-  margin: rem(20px) 0;
+  border-top: 1px solid var(--color-primary);
+  margin: 0;
   padding: 0;
 }

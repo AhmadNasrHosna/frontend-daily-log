@@ -1,0 +1,13 @@
+block vars
+
+article.c-day
+  header.c-day__header
+    time.c-date
+      span.c-date__day=day
+      span.c-date__month=month
+      span.c-date__year=year
+    .c-day__index
+      span
+        a(href=`#day${index}`) ##{index}
+  .c-day__content
+    block content

@@ -1,0 +1,25 @@
+extends ../components/_log
+
+block vars
+  - var day = '25';
+  - var month = 'Mar';
+  - var year = '2020';
+  - var index = '54';
+
+
+block content
+  blockquote
+    p
+      | This frees you from having to deal with optimizing your event handler-related code yourself. If you've manually had to do that in the past, you can relax knowing that React takes care of that tedious task for you. If you've never had to optimize event
+      | handler-related code yourself, consider yourself lucky :P
+    p
+      a(href='https://www.kirupa.com/react/events_in_react.htm') Kirupa
+      |       (hahaha :D ♥)
+  :markdown-it(linkify langPrefix='highlight-')
+    Continued reading about Events in React with Kirupa. And I made this pretty cool [Counter](https://github.com/ahmedhosna95/react-counter-example-on-dealing-with-events)! :D
+  h3 I read:
+  ul
+    li
+      a(href='https://www.kirupa.com/react/events_in_react.htm') Events in React
+  img.gif-preview(src='assets/images/react-counter.gif', alt='Simple React Counter')
+

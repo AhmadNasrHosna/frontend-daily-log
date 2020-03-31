@@ -25,9 +25,9 @@ figure,
 table,
 address,
 fieldset,
-legend {
+legend,
+input {
   margin: 0;
-  padding: 0;
 }
 
 /**

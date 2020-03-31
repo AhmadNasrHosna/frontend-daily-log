@@ -13,55 +13,51 @@
 // `font-size` with a pixel fallback, as well as generating a `line-height` that
 // will sit on our baseline grid.
 
-h1, h2, h3, h4, h5, h6 {
-  line-height: var(--line-height-sm);
-}
-
-// Heading mobile individual styles
-
-/* h1 {
-  font-size: var(--s6);
-}
-
-h2 {
-  font-size: var(--s5);
-}
-
+h1,
+h2,
 h3 {
-  font-size: var(--s4);
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+  font-family: var(--font-family-plain);
 }
 
-h4 {
-  font-size: var(--s3);
-}
-
-h5 {
-  font-size: var(--s2);
-}
-
-h6 {
-  font-size: var(--s1);
-} */
-
-/* @mixin bp md {
-  // Heading desktop individual styles
-  h1 {
-    font-size: $h1;
-  }
-
-  h2 {
-    font-size: $h2;
-  }
-
-  h3 {
-    font-size: $h3;
-  }
-
+ul ul {
   h4 {
-    font-size: $h4;
+    font-size: 95%;
+
+    + * {
+      margin-top: calc(var(--gap) * 0.25);
+    }
+  }
+}
+
+h1 {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  font-weight: 900;
+
+  @media (min-width: 36em) {
+    font-size: 2.2685rem;
   }
 
-  h5 {
-    font-size: $h5;
+  span {
+    font-size: 34%;
+    letter-spacing: 0.02em;
+    margin-top: 0.3em;
+    font-weight: 300;
+    font-family: var(--font-family-mono);
+    background-color: hsla(var(--color-secondary-h), 60%, 50%, 0.25);
+    border-radius: 50px;
+    padding: 0.3em 1em 0.2em;
+    text-align: center;
+    text-transform: none;
+    line-height: 1.2;
+
+    @media (min-width: 36em) {
+      font-size: 30%;
+    }
   }
-} */
+}

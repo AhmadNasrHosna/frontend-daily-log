@@ -1,9 +1,0 @@
-.l-section {
-  &__head {
-    @mixin bp sm {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
-}

@@ -7,67 +7,26 @@
  * the outer container for components and it usually provides a fixed width.
  */
 
- :root {
+:root {
   --container-width-xs: rem(600px);
   --container-width-sm: rem(976px);
   --container-width-md: rem(1024px);
-  --container-width-lg: rem(1280px);
-  --container-width-xl: rem(1440px);
-  --container-padding : var(--s3);
+  --container-width-lg: rem(1200px);
+  --container-padding: var(--gap);
 }
 
 .o-container {
-  width: calc(100% - var(--container-padding)); @mixin bp sm {
-  width: calc(100% - (2 * var(--container-padding))); }
+  width: calc(100% - var(--container-padding)); @media (min-width: 36em) {
+  width: calc(100% - var(--container-padding) * 2); }
+  max-width: var(--container-width-lg);
   margin: 0 auto;
 
-  .o-container { width: 100%; }
-
-  &--full-width {
-    width: 100%;
+  .o-section--everyday & {
+    @media (max-width: 36em) { width: 100%; }
   }
 
-  &--xs {
-    max-width: var(--container-width-xs);
-  }
-
-  &--sm {
-    max-width: var(--container-width-sm);
-  }
-
-  &--md {
-    max-width: var(--container-width-md);
-  }
-
-  &--lg {
-    max-width: var(--container-width-lg);
-  }
-
-  &--xl {
-    max-width: var(--container-width-xl);
-  }
-
-  // alt approach - max-width is updated at specific breakpoints
-  // credit: codyhouse-framework
-  &--adaptive, &--adaptive-lg {
-    max-width: var(--container-width-xs);   @mixin bp md {
-    max-width: var(--container-width-md); } @mixin bp xl {
-    max-width: var(--container-width-lg); }
-  }
-
-  &--adaptive-sm {
-    max-width: var(--container-width-xs); @mixin bp md {
-    max-width: var(--container-width-sm); }
-  }
-
-  &--adaptive-md {
-    max-width: var(--container-width-xs); @mixin bp md {
-    max-width: var(--container-width-md); }
-  }
-
-  &--adaptive-xl {
-    max-width: var(--container-width-xs);   @mixin bp md {
-    max-width: var(--container-width-md); } @mixin bp xl {
-    max-width: var(--container-width-xl); }
+  .p-footer &,
+  .p-header & {
+    height: 100%;
   }
 }

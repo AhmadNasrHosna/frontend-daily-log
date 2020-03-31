@@ -1,0 +1,20 @@
+extends ../components/_log
+
+block vars
+  - var day = '22';
+  - var month = 'Mar';
+  - var year = '2020';
+  - var index = '51';
+
+
+block content
+  img.gif-preview(src='assets/images/componentlifecycle.gif', alt='Component Lifecycle')
+  :markdown-it(linkify langPrefix='highlight-')
+    Continued learning about State and Lifecycle. I read a clearly explained write-up about [Component Lifecycle](https://www.kirupa.com/react/component_lifecycle.htm) by the great kirupa, again! This guy is amazing! Thanks kirupa today and everyday. ♥
+  h3 I read:
+  ul
+    li
+      a(href='https://zellwk.com/blog/calendar-flexbox-fallback/') How to add Flexbox fallback to CSS Grid
+    li
+      a(href='https://zellwk.com/blog/older-browsers/') Supporting older browsers
+

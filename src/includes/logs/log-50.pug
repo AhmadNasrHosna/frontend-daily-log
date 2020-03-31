@@ -1,0 +1,30 @@
+extends ../components/_log
+
+block vars
+  - var day = '21';
+  - var month = 'Mar';
+  - var year = '2020';
+  - var index = '50';
+
+
+block content
+  :markdown-it(linkify langPrefix='highlight-')
+    Continued learning React with Kirupa, and for the first time I had tried to learn something from its documentation, and this what I made today! I read about States from the [React documentation](https://reactjs.org/docs). I read about State. I think I got it conceptually a little bit. It's simple, but I'm still confused about!
+  h3 I read:
+  ul
+    li
+      a(href='https://reactjs.org/docs/rendering-elements.html#updating-the-rendered-element') Rendering Elements
+    li
+      a(href='https://reactjs.org/docs/components-and-props.html#function-and-class-components') Components and Props
+    li
+      a(href='https://reactjs.org/docs/state-and-lifecycle.html') State and Lifecycle
+    li
+      a(href='https://github.com/uberVU/react-guide/blob/master/props-vs-state.md') Props vs State
+      | , A write-up about differences between Props and States,
+      |                       was so helpful. Thanks uberVU!
+    li
+      a(href='https://www.kirupa.com/react/from_data_to_ui_in_react.htm') Going from Data to UI in React
+      | . Learnt how to fearlessly deal with JSX in any sort of a
+      |                       JavaScript situation.
+
+

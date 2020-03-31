@@ -2,29 +2,25 @@
 LISTS (GLOBAL)
 ========================================================================== */
 
-
-/**
-  * #LIST-BARE
-  * Strip list-like appearance from lists
-  * by removing their bullets and any indentation.
-  */
-
-.o-list-bare {
+.o-list {
   list-style: none;
-}
+  margin: 0;
+  padding: 0;
 
-/**
+  /**
   * #LIST-INLINE
   * This modifier simply displays a list of items in one line.
   * [1]: Remove the space between inline block elements
   * https://css-tricks.com/fighting-the-space-between-inline-block-elements/
   */
 
-.o-list-inline {
-  li { display: inline-block; } /* Fallback styles for old browesers */
+  &--inline {
+    li {
+      display: inline-block;
+    } /* Fallback styles for old browesers */
 
-  @supports (display: flex) {
-    display: inline-flex; /* [1] */
+    @supports (display: flex) {
+      display: inline-flex; /* [1] */
+    }
   }
 }
-

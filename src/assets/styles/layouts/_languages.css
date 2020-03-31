@@ -1,0 +1,22 @@
+.l-languages {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: var(--gap);
+  align-items: start;
+
+  @media (min-width: 48em) {
+    grid-template-columns: repeat(2, 1fr);
+
+    > :nth-child(3) {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media (min-width: 62em) {
+    grid-template-columns: repeat(3, 1fr);
+
+    > :nth-child(3) {
+      grid-column: auto;
+    }
+  }
+}

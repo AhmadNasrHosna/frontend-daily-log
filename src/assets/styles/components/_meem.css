@@ -1,0 +1,18 @@
+.c-meem {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 50% 0 0 0;
+  filter: blur(15px);
+  transform: translate(10%, 10%);
+  transform-origin: bottom right;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+
+  &:hover {
+    filter: blur(0);
+    transform: translate(0);
+    border-radius: 0;
+  }
+}

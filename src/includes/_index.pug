@@ -1,0 +1,66 @@
+main.o-main
+  section.o-section.o-section--subjects
+    .o-container
+      h2.o-section__title Main Learning Subjects
+      .l-languages
+        .c-language.c-language--html
+          .c-language__head
+            h2.c-language__title HTML
+            h3.c-language__subtitle
+              | What I should learn in the next 6 months in HTML is:
+          .c-language__body
+            ul.o-list.c-todo(role='list')
+              include components/_subjects-html
+
+        .c-language.c-language--css
+          .c-language__head
+            h2.c-language__title CSS
+            h3.c-language__subtitle
+              | What I should learn in the next 6 months in CSS is:
+          .c-language__body
+            ul.o-list.c-todo(role='list')
+              include components/_subjects-css
+
+        .c-language.c-language--javascript
+          .c-language__head
+            h2.c-language__title JavaScript
+            h3.c-language__subtitle
+              | What I should learn in the next 6 months in JavaScript is:
+          .c-language__body
+            ul.o-list.c-todo(role='list')
+              include components/_subjects-javascript
+
+  section.o-section.o-section--resources
+    .o-container
+      h2.o-section__title Learning Resources
+      .o-section__content
+        ul.o-list.c-resources.c-resources--courses(role='list')
+          h3 Courses
+          include components/_resources-courses
+
+        ul.o-list.c-resources.c-resources--books(role='list')
+          h3 Books
+          include components/_resources-books
+
+        ul.o-list.c-resources.c-resources--tutorials(role='list')
+          h3 Tutorials
+          include components/_resources-tutorials
+
+        ul.o-list.c-resources.c-resources--articles(role='list')
+          h3 Projects Ideas
+          include components/_resources-ideas
+
+        ul.o-list.c-resources.c-resources--articles(role='list')
+          h3 Subjects
+          ul
+            h4 Web Components
+            include components/_resources-subjects
+
+  section.o-section.o-section--everyday
+    .o-container
+      .o-section__head
+        h2.o-section__title Everyday
+        p.o-section__desc
+          | A daily log to write about everything I'm working on and learning.
+      .l-days
+          include logs/_logs_

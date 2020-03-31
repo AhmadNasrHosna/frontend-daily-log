@@ -1,0 +1,19 @@
+//-:markdown-it(linkify langPrefix='highlight-')
+extends ../components/_log
+
+block vars
+  - var day = '17';
+  - var month = 'Mar';
+  - var year = '2020';
+  - var index = '46';
+
+
+block content
+  :markdown-it(linkify langPrefix='highlight-')
+    All morning I was struggling with an issue of using Mini Css Extract Plugin on my Webpack configuration. The issue was about that all images and fonts from inside CSS files were not loading in the browser, there was a problem on how the URL `url('...')` to `background-image` and `@font-face` was not being passed correct to CSS Production build code. But in the end I just accidentally solved it by a temporary solution I don't even know if I will get a headache from it in the future.
+
+    Also, I learned how to deploy my apps on [Netlify](https://www.netlify.com/). You can [view](https://travel-site-webpack.netlify.com/) the landing page I have been working on for the last month.
+
+    I have made a great progress, so far, in dealing with most of modern workflow tools for front-end development. What remains is some improvements I will take care of it on this coming friday.
+
+

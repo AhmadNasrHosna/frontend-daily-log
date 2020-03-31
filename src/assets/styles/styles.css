@@ -26,7 +26,7 @@
  * In this layer is common define the variables that can customize the template.
  */
 
-@import 'settings/_global';
+@import "settings/_global";
 
 /**
  * Tools.
@@ -36,12 +36,10 @@
  */
 
 @import "tools/mixins/_breakpoints";
-@import "tools/mixins/_clearfix";
-@import "tools/mixins/_effects";
 @import "tools/mixins/_sr-only";
 @import "tools/mixins/_centering";
 @import "tools/mixins/_pseudo-starter";
-@import 'tools/mixins/_reset';
+@import "tools/mixins/_reset";
 
 /**
  * Generic. or (Vendors things)
@@ -70,7 +68,11 @@
 @import "elements/_links";
 @import "elements/_forms";
 @import "elements/_headings";
-@import "elements/_paragraphs";
+@import "elements/_lists";
+@import "elements/_hr";
+@import "elements/_code";
+@import "elements/_images";
+@import "elements/_quotes";
 
 /**
  * Objects. (namespace: o-)
@@ -84,18 +86,16 @@
 @import "objects/_container";
 @import "objects/_lists";
 @import "objects/_section";
-@import "objects/_media";
-@import "objects/_animations";
+@import "objects/_page";
 
 /**
  * Layouts. (namespace: l-)
  *
  */
 
- @import "layouts/_flow";
- @import "layouts/_testimonials";
- @import "layouts/_header";
- @import "layouts/_section";
+@import "layouts/_badges";
+@import "layouts/_days";
+@import "layouts/_languages";
 
 /**
  * Components. (namespace: c-)
@@ -106,8 +106,14 @@
  * Class names here are more specific (must be named explicitly).
  */
 
-@import "components/_buttons";
-@import "components/_react-component-style";
+@import "components/_badge";
+@import "components/_date";
+@import "components/_day";
+@import "components/_language";
+@import "components/_meem";
+@import "components/_resources";
+@import "components/_todo";
+@import "components/_checkbox";
 
 /**
  * Patterns. (namespace: p-)
@@ -116,6 +122,8 @@
  * for example, The header would be a pattern because it is not scalable (the header cannot be used in the content or sidebar area) and also contains other components such as buttons, accordions, menus, logos, search form etc
  */
 
+@import "patterns/_header";
+@import "patterns/_footer";
 
 /**
  * Scopes. (namespace: s-)
@@ -131,17 +139,3 @@
  * It will most likely come with !important as we are sure to use them.
  * In other words: Each utility class has an !important suffix to max out its specificity. Utility classes are for final adjustments, and should not be overridden by anything that comes before them.
  */
-
-// @import 'utilities/_background';
-@import 'utilities/_centering';
-// @import 'utilities/_display';
-// @import 'utilities/_floats';
-@import 'utilities/_headings';
-// @import 'utilities/_relative-height';
-@import 'utilities/_spacings';
-@import 'utilities/_typography';
-@import 'utilities/_colors';
-@import 'utilities/_clearfix';
-@import 'utilities/_effects';
-@import 'utilities/_show-hide';
-@import 'utilities/_print';

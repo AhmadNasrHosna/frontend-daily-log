@@ -1,0 +1,18 @@
+//-:markdown-it(linkify langPrefix='highlight-')
+extends ../components/_log
+
+block vars
+  - var day = '13';
+  - var month = 'Mar';
+  - var year = '2020';
+  - var index = '42';
+
+
+block content
+  p
+    | Hello, my fake readers. Yes, It's friday! And I'm supposed to be having fun with anything except web things, but I have broken the rule, today, and read an article I want to save its link here:
+  ul
+    li
+      a(href='https://gedd.ski/post/the-difference-between-width-and-flex-basis/') The Difference Between Width and Flex Basis
+
+
