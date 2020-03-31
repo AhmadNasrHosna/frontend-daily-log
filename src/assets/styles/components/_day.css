@@ -141,6 +141,7 @@
 
       blockquote a {
         color: var(--color-link);
+        border-bottom-color: hsla(var(--color-secondary-h), var(--color-secondary-s), 36%, 0.3);
       }
 
       a:hover {
