@@ -1,4 +1,5 @@
-# react-counter-example-on-dealing-with-events
+A daily log to write about everything I'm working on and learning.
 
+## Deployment
 
-[![React Simple Counter](https://github.com/ahmedhosna95/react-counter-example-on-dealing-with-events/blob/master/src/react-counter.gif?raw=true)](https://raw.githack.com/ahmedhosna95/react-counter-example-on-dealing-with-events/master/src/index.html)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c9112739-f50b-45f6-bba6-8f5f5c680edb/deploy-status)](https://app.netlify.com/sites/nifty-euclid-736fe4/deploys)
