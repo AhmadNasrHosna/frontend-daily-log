@@ -13,9 +13,11 @@
     text-decoration: none;
   }
 
-  img.gif-preview {
+  img.gif-preview,
+  img.img-preview {
     border-radius: 14px;
     box-shadow: 0 0 0 6px var(--color-secondary);
+    transition: all 150ms ease;
   }
 
   &:not(:first-child) {
@@ -121,6 +123,16 @@
     }
 
     .c-day__content {
+      img.gif-preview, img.img-preview {
+        box-shadow: 0 0 0 6px
+          hsla(
+            var(--color-primary-h),
+            var(--color-primary-s),
+            var(--color-primary-l),
+            0.2
+          );
+      }
+
       pre {
         background: var(--color-gradient);
         color: var(--color-text);
@@ -141,7 +153,12 @@
 
       blockquote a {
         color: var(--color-link);
-        border-bottom-color: hsla(var(--color-secondary-h), var(--color-secondary-s), 36%, 0.3);
+        border-bottom-color: hsla(
+          var(--color-secondary-h),
+          var(--color-secondary-s),
+          36%,
+          0.3
+        );
       }
 
       a:hover {

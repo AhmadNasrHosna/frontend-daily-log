@@ -23,7 +23,7 @@
 
   > * {
     padding: 0.15em 0.5em;
-    background: hsl(var(--color-secondary-h), 62%, 50%);
+    background: hsl(calc(var(--color-secondary-h) + -10), 62%, 50%);
     border: 3px solid
       hsl(var(--color-secondary-h), var(--color-secondary-s), 80%);
   }

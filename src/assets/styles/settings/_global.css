@@ -1,4 +1,4 @@
-///* ========================================================================
+///* ======================================================================== /* ========================================================================
 //   #GLOBAL
 //   ======================================================================== */
 
@@ -15,28 +15,39 @@
   // MEDIA BREAKPOINTS
 
   $bp-xs: 35.99875em; //~ 575.98px      1em == 16px
-  $bp-sm: 36em;       //~ 576px
+  $bp-sm: 36em; //~ 576px
   $bp-as: 47.99875em; //~ 767.98px
-  $bp-md: 48em;       //~ 768px
-  $bp-lg: 62em;       //~ 992px
-  $bp-xl: 75em;       //~ 1200px
+  $bp-md: 48em; //~ 768px
+  $bp-lg: 62em; //~ 992px
+  $bp-xl: 75em; //~ 1200px
 
   // OTHER CUSTOM VARIABLES
-  --gap:2rem;
-  --color-primary-h:74;
-  --color-primary-s:22%;
-  --color-primary-l:77%;
-  --color-primary:hsl(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l));
-  --color-secondary-h:34;
-  --color-secondary-s:42%;
-  --color-secondary-l:85%;
-  --color-secondary:hsl(var(--color-secondary-h), var(--color-secondary-s), var(--color-secondary-l));
-  --color-gradient:linear-gradient(45deg, var(--color-primary), var(--color-secondary));
-  --color-text:hsl(var(--color-primary-h), 10%, 23%);
-  --color-link:hsl(var(--color-secondary-h), 100%, 36%);
-  --color-border:hsl(var(--color-primary-h), 10%, 88%);
-  --font-family-plain:"Inter", system-ui;
-  --font-family-serif:"Domine", Georgia, serif;
-  --font-family-mono:"Inconsolata", "Lucida Console", Menlo, Monaco, monospace;
+  --gap: 2rem;
+  --color-primary-h: 74;
+  --color-primary-s: 22%;
+  --color-primary-l: 77%;
+  --color-primary: hsl(
+    var(--color-primary-h),
+    var(--color-primary-s),
+    var(--color-primary-l)
+  );
+  --color-secondary-h: 34;
+  --color-secondary-s: 42%;
+  --color-secondary-l: 85%;
+  --color-secondary: hsl(
+    var(--color-secondary-h),
+    var(--color-secondary-s),
+    var(--color-secondary-l)
+  );
+  --color-gradient: linear-gradient(
+    45deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  --color-text: hsl(var(--color-primary-h), 10%, 23%);
+  --color-link: hsl(calc(var(--color-secondary-h) - 2), 100%, 36%);
+  --color-border: hsl(var(--color-primary-h), 10%, 88%);
+  --font-family-plain: "Inter", system-ui;
+  --font-family-serif: "Domine", Georgia, serif;
+  --font-family-mono: "Inconsolata", "Lucida Console", Menlo, Monaco, monospace;
 }
-

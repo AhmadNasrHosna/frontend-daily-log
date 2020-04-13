@@ -1,0 +1,12 @@
+extends ../components/_log
+
+block vars
+  - var day = '31';
+  - var month = 'Mar';
+  - var year = '2020';
+  - var index = '60';
+
+
+block content
+  :markdown-it(linkify langPrefix='highlight-')
+    Done with converting the whole of this page you are browsing now to be a simple static website. I built it from scratch with Pug.js, PostCSS and Webpack. View it on [Github](https://github.com/ahmedhosna95/front-end-daily-log).
