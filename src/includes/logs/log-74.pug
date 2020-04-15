@@ -1,0 +1,15 @@
+extends ../components/_log
+
+block vars
+  - var day = '14';
+  - var month = 'Apr';
+  - var year = '2020';
+  - var index = '74';
+
+
+block content
+  :markdown-it(linkify langPrefix='highlight-')
+    Continued learning about Redux. Read about how it works with React. Build a small thing combines between the two.
+    ### I Read
+    - [Using Redux with React](#0)
+  img.img-preview(src='assets/images/reduxcounter.png', alt='React-Redux Counter')

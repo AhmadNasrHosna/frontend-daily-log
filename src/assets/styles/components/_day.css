@@ -36,7 +36,11 @@
       margin-top: calc(var(--gap) * 0.5);
     }
 
-    > * + h3 {
+    > * + img {
+      margin-top: calc(var(--gap) * 0.85);
+    }
+
+    > * + h3, > * + img {
       margin-top: calc(var(--gap) * 0.9);
     }
 
