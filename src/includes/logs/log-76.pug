@@ -1,0 +1,21 @@
+extends ../components/_log
+
+block vars
+  - var day = '16';
+  - var month = 'Apr';
+  - var year = '2020';
+  - var index = '76';
+
+
+block content
+  :markdown-it(linkify langPrefix='highlight-')
+    Learned how to set and get environment variables in Node.js.
+    Got a general idea of Promises in JavaScript and learned how to create a new promise and leverage it,
+    and learned how to leverage an pre-existing promise like the one that MongoDB creates when we perform a CRUD operation.
+    Also, I learned how to hash users passwords in Node.js using the NPM *bcryptjs* package.
+
+    Made a cool [sliding menu](https://react-smooth-sliding-menu.netlify.app/) with React. ;)
+
+    ### I read
+    - [Get and Set Environment Variables in Node.js](https://davidwalsh.name/node-environment-variables)
+  img.img-preview(src='assets/images/reactsmoothslidingmenuxl.gif', alt='React Smooth Sliding Menu')
