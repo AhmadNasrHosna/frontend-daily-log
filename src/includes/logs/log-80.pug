@@ -1,0 +1,12 @@
+extends ../components/_log
+
+block vars
+  - var day = '20';
+  - var month = 'Apr';
+  - var year = '2020';
+  - var index = '80';
+
+
+block content
+  :markdown-it(linkify langPrefix='highlight-')
+    Set up Webpack for the current NodeJS project I'm working on. Learned how to run multiple commands in the same time using the NPM [*Concurrently*](https://www.npmjs.com/package/concurrently) package. Added a live search feature to the app using Axios.

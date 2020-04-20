@@ -1,0 +1,15 @@
+extends ../components/_log
+
+block vars
+  - var day = '17';
+  - var month = 'Apr';
+  - var year = '2020';
+  - var index = '77';
+
+
+block content
+  :markdown-it(linkify langPrefix='highlight-')
+    Integrated [Gravatar](http://gravatar.com/) in the application I'm working on by generating a MD5 hash for the user's email.
+    I needed to use the [md5](https://www.npmjs.com/package/md5) package to do that. Also, I found a [pretty easy way](https://odino.org/generating-the-md5-hash-of-a-string-in-nodejs/) to implement that by leveraging the [`crypto`](https://nodejs.org/api/crypto.html#crypto_crypto) NodeJS module.
+
+    Learned a little about *Sessions* and how to identify users when they login or logout.

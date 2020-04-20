@@ -1,0 +1,12 @@
+extends ../components/_log
+
+block vars
+  - var day = '19';
+  - var month = 'Apr';
+  - var year = '2020';
+  - var index = '79';
+
+
+block content
+  :markdown-it(linkify langPrefix='highlight-')
+    Wrote code to check if the current visitor is the owner of the post he is viewing. Gave the users the ability to edit, update and delete their posts. Integrated markdown-based content into posts.
