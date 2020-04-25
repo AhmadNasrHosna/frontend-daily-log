@@ -1,0 +1,12 @@
+extends ../components/_log
+
+block vars
+  - var day = '23';
+  - var month = 'Apr';
+  - var year = '2020';
+  - var index = '83';
+
+
+block content
+  :markdown-it(linkify langPrefix='highlight-')
+    Finished the application and pushed it up onto the internet! View it [live](#0) at Heroku, or you can check out its [source files](#0)

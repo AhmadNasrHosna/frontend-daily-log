@@ -32,4 +32,8 @@
   &--resources {
     background-color: hsl(var(--color-secondary-h), 20%, 88%);
   }
+
+  &--subjects {
+    background-color: hsl(var(--color-secondary-h), 20%, 98%);
+  }
 }

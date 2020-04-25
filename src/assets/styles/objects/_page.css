@@ -13,7 +13,7 @@
 
   @media (min-width: 36em) {
     display: grid;
-    grid-template-rows: 5.95rem auto 2.5rem;
+    grid-template-rows: auto auto 2.5rem;
   }
 }
 

@@ -1,20 +1,59 @@
 .p-header {
   border-bottom: 6px solid var(--color-border);
-  padding: 1em 0;
   position: relative;
   background: var(--color-gradient);
 
-  @media (min-width: 36em) {
-    padding: 0;
-  }
-
   &__inner {
-    height: 100%;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 5rem 0;
+
     @media (min-width: 36em) {
-      justify-content: flex-start;
+      height: 100%;
+    }
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    font-weight: 900;
+    text-align: center;
+    max-width: 320px;
+    background: linear-gradient(
+      45deg,
+      hsla(var(--color-primary-h), 22%, 72%, 1),
+      hsla(var(--color-secondary-h), 42%, 80%, 1)
+    );
+    padding: 1rem 1rem 0;
+    border-radius: 10px;
+    border: 6px solid var(--color-text);
+    overflow: hidden;
+    letter-spacing: -0.025em;
+
+    @media (min-width: 36em) {
+      font-size: 3rem;
+      max-width: 400px;
+    }
+
+    span:last-child {
+      font-size: 34%;
+      font-weight: 300;
+      font-family: var(--font-family-mono);
+      background-color: hsla(var(--color-secondary-h), 60%, 50%, 0.275);
+      padding: 0.75em 0 0.6em;
+      text-align: center;
+      text-transform: none;
+      line-height: 1.2;
+      letter-spacing: 0;
+      margin: 1.4em -1rem 0;
+
+      @media (min-width: 36em) {
+        font-size: 30%;
+      }
     }
   }
 
@@ -45,9 +84,7 @@
     right: 1em;
 
     @media (min-width: 36em) {
-      margin: auto 0 0.5rem auto;
       font-size: 0.6rem;
-      position: static;
     }
 
     &:hover {

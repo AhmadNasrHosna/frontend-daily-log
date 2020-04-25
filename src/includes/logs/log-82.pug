@@ -1,0 +1,12 @@
+extends ../components/_log
+
+block vars
+  - var day = '22';
+  - var month = 'Apr';
+  - var year = '2020';
+  - var index = '82';
+
+
+block content
+  :markdown-it(linkify langPrefix='highlight-')
+    Built a live chat using Socket.IO. Added browser-side validation to the application. Learned a little about CSRF. Built my first API!
