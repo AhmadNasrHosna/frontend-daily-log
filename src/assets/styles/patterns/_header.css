@@ -28,7 +28,7 @@
       hsla(var(--color-primary-h), 22%, 72%, 1),
       hsla(var(--color-secondary-h), 42%, 80%, 1)
     );
-    padding: 1rem 1rem 0;
+    padding: 1.5rem 1rem 0;
     border-radius: 10px;
     border: 6px solid var(--color-text);
     overflow: hidden;
@@ -49,7 +49,7 @@
       text-transform: none;
       line-height: 1.2;
       letter-spacing: 0;
-      margin: 1.4em -1rem 0;
+      margin: 1.6rem -1rem 0;
 
       @media (min-width: 36em) {
         font-size: 30%;

@@ -1,0 +1,15 @@
+extends ../components/_log
+
+block vars
+  - var day = '25';
+  - var month = 'Apr';
+  - var year = '2020';
+  - var index = '85';
+
+
+block content
+  :markdown-it(linkify langPrefix='highlight-')
+    Renamed the title of this page to "Front-end Daily Log", and updated the header brand design.
+
+  img.img-preview(src='assets/images/dailylogsheaderbrand.gif', alt='Front-end Daily brand logo design')
+
