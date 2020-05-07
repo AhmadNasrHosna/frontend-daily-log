@@ -1,5 +1,5 @@
 
-code {
+code:not([class*="highlight"]) {
   font-family: var(--font-family-mono);
   border-radius: 4px;
   background: var(--color-gradient);
