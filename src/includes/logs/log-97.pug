@@ -1,0 +1,45 @@
+extends ../components/_log
+
+block vars
+  - var day = '7';
+  - var month = 'May';
+  - var year = '2020';
+  - var index = '97';
+
+
+block content
+  :markdown-it(linkify langPrefix='highlight-')
+    It was the first time to me to know about something called "Computed Property Names" in JavaScript (ES6).
+    I took a copy of an existed object with ES6 spread operator `...obj`,
+    and then with ES6 "Computed Property Names" syntax,
+    I was able to update the copied object values using the object literal notation by assigning an expression as a property in the same time inside the object not outside it!
+
+    #### That old way:
+
+    ```
+    .
+    .
+    const updatedObj = { ...obj }
+    updatedObj[key] = value
+    .
+    .
+    ```
+
+    #### The new one:
+
+    ```
+    .
+    .
+    const updatedObj = {
+      ...obj,
+      [key]: value
+    }
+    .
+    .
+    ```
+
+    I learned that for the first time from Wes Bos's React for Beginners course.
+    All the time, I learn new things from Wes. Thanks a lot to him.
+
+    ### I read
+    - [Computed Property Names in JavaScript](https://tylermcginnis.com/computed-property-names/)
