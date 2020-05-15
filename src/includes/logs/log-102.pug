@@ -1,0 +1,14 @@
+extends ../components/_log
+
+block vars
+  - var day = '12';
+  - var month = 'May';
+  - var year = '2020';
+  - var index = '102';
+
+
+block content
+  :markdown-it(linkify langPrefix='highlight-')
+    While I was working on a full-stack React app I noticed that when I used the React hook `useEffect` in order to be invoked immediately after updating a piece of State, I noticed that it also be invoked at mount, not only at updating!
+
+    Continued studying "React of the rest of us" course.
