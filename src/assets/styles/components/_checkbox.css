@@ -24,11 +24,12 @@
 
     &::after {
       width: 5px;
-      height: 10px;
+      height: 11px;
       border-bottom: 2px solid var(--color-primary);
       border-right: 2px solid var(--color-primary);
-      transform: rotate(45deg);
+      transform: rotate(40deg) translateY(-50%) translateX(-4px);
       opacity: 0;
+      top: 50%;
     }
   }
 
@@ -46,7 +47,11 @@
   }
 
   input {
-    opacity: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
     position: absolute;
     z-index: -1;
 
